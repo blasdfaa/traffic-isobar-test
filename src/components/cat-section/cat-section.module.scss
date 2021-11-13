@@ -1,0 +1,43 @@
+@import '../../styles/ds-system/ds-typography.scss';
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/mixins/m_media.scss';
+
+.title {
+  @include s40-h47-bold;
+
+  margin: 0 0 34px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56px;
+}
+
+.catImgWrapper {
+  display: flex;
+  width: 258px;
+  height: 258px;
+  margin-bottom: 44px;
+  border: 1px solid $orange-500;
+  box-shadow: 0 0 58px $shadow-500;
+}
+
+.catImg {
+  display: block;
+  object-fit: cover;
+}
+
+.imagePreloader {
+  display: block;
+  margin: auto;
+}
+
+@include media-mobile {
+  .title {
+    @include s27-h38-bold;
+
+    text-align: center;
+  }
+}

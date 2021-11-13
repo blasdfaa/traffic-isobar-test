@@ -1,0 +1,35 @@
+@mixin typography_template($font-size, $line-height, $font-weight: 400) {
+  font-family: inherit;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-style: normal;
+  line-height: $line-height;
+}
+
+/* Regular */
+
+@mixin s17-h20-regular {
+  @include typography_template(17px, 20px);
+}
+
+@mixin s20-h23-regular {
+  @include typography_template(20px, 23px);
+}
+
+@mixin s24-h34-regular {
+  @include typography_template(24px, 34px);
+}
+
+/* Bold */
+
+@mixin s27-h38-bold {
+  @include typography_template(27px, 38px, 700);
+}
+
+@mixin s60-h70-bold {
+  @include typography_template(60px, 70px, 700);
+}
+
+@mixin s40-h47-bold {
+  @include typography_template(40px, 47px, 700);
+}

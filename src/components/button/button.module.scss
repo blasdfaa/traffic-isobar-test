@@ -1,0 +1,48 @@
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/ds-system/ds-typography.scss';
+
+.button {
+  @include s17-h20-regular;
+
+  padding: 14px 26px;
+  border: none;
+  min-height: 50px;
+  color: $white-900;
+  background-color: $orange-500;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange-400;
+  }
+}
+
+.small {
+  width: 224px;
+}
+
+.medium {
+  width: 320px;
+}
+
+.large {
+  width: 400px;
+}
+
+.full {
+  width: 100%;
+}
+
+.isDisabled {
+  background-color: $orange-100;
+  cursor: default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $orange-100;
+  }
+}

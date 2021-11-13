@@ -1,0 +1,66 @@
+@import '../../styles/ds-system/ds-typography.scss';
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/mixins/m_center.scss';
+@import '../../styles/mixins/m_media.scss';
+
+.section {
+  margin-bottom: 100px;
+}
+
+.title {
+  @include s60-h70-bold;
+
+  margin: 0;
+  text-align: center;
+
+  color: $orange-500;
+  text-transform: uppercase;
+}
+
+.title span {
+  position: relative;
+  padding: 0 185px;
+
+  &::before,
+  &::after {
+    @include p_center-v;
+
+    content: '';
+    border-bottom: 4px solid $orange-500;
+    width: 156px;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    left: unset;
+    right: 0;
+  }
+}
+
+@include media-mobile {
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    @include s40-h47-bold;
+  }
+
+  .title span {
+    padding: 0 45px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      @include p_center-h;
+
+      width: calc(100% - 90px);
+      bottom: -10px;
+    }
+  }
+}

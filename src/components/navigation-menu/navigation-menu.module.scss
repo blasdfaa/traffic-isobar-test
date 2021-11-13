@@ -1,0 +1,73 @@
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/ds-system/ds-typography.scss';
+@import '../../styles/ds-system/ds-breakpoints.scss';
+@import '../../styles/mixins/m_clear-list.scss';
+@import '../../styles/mixins/m_media.scss';
+
+.list {
+  @include clear-list;
+  @include s20-h23-regular;
+
+  display: flex;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  height: 112px;
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.listLink {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $orange-500;
+  }
+}
+
+.listLink.active {
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    left: 0;
+    border-bottom: 1px solid $orange-500;
+  }
+}
+
+@include media-mobile {
+  .list {
+    padding: 80px 30px 30px;
+    transform: translateX(100%);
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: $black-900;
+    z-index: 10;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .list.opened {
+    transform: translateX(0);
+  }
+
+  .listItem {
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}

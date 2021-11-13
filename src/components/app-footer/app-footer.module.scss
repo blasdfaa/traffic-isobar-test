@@ -1,0 +1,24 @@
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/ds-system/ds-typography.scss';
+@import '../../styles/mixins/m_media.scss';
+
+.footer {
+  flex-shrink: 0;
+  height: 112px;
+  background-color: $black-900;
+}
+
+.copyright {
+  @include s20-h23-regular;
+
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 112px;
+}
+
+@include media-mobile {
+  .copyright {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,81 @@
+@import '../../styles/ds-system/ds-typography.scss';
+@import '../../styles/ds-system/ds-colors.scss';
+@import '../../styles/mixins/m_media.scss';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+
+.innerContent {
+  padding-top: 20px;
+  max-width: 575px;
+}
+
+.name {
+  @include s40-h47-bold;
+
+  margin: 0 0 28px;
+}
+
+.info {
+  @include s24-h34-regular;
+
+  margin: 0 0 28px;
+}
+
+.photoWrapper {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-color: $white-900;
+  border-radius: 50%;
+}
+
+.photo {
+  margin: auto;
+  display: block;
+  width: 260px;
+  height: 260px;
+}
+
+@include media-tablet {
+  .content {
+    align-items: center;
+  }
+
+  .innerContent {
+    padding-top: 20px;
+    max-width: 400px;
+  }
+
+  .photoWrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@include media-mobile {
+  .content {
+    flex-direction: column;
+  }
+
+  .innerContent {
+    order: 1;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .viewButton {
+    display: block;
+    margin: 0 auto;
+  }
+}
